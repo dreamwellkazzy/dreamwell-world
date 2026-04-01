@@ -1,0 +1,210 @@
+import { PALETTE } from '@shared/constants';
+import type { RobotConfig } from '@shared/types';
+
+/**
+ * Pre-defined robot configurations for every NPC role in Dreamwell World.
+ */
+export const ROBOT_CONFIGS: Record<string, RobotConfig> = {
+  sentinel: {
+    id: 'sentinel',
+    name: 'Sentinel',
+    role: 'sentinel',
+    bodyColor: PALETTE.SENTINEL_BLUE,
+    accentColor: PALETTE.DARK_CHROME,
+    screenColor: PALETTE.SCREEN_GREEN,
+    eyeColor: '#FFFFFF',
+    bodyShape: 'standard',
+    headShape: 'box',
+    accessories: ['antenna_single'],
+    scale: 1.0,
+    personality: {
+      voicePitch: 0.8,
+      talkSpeed: 25,
+      idleAnimation: 'look_around',
+      walkSpeed: 2.5,
+    },
+  },
+
+  einstein: {
+    id: 'einstein',
+    name: 'Einstein',
+    role: 'einstein',
+    bodyColor: PALETTE.EINSTEIN_GOLD,
+    accentColor: PALETTE.CHROME,
+    screenColor: PALETTE.SCREEN_AMBER,
+    eyeColor: '#FFFFFF',
+    bodyShape: 'slim',
+    headShape: 'rounded_box',
+    accessories: ['wire_hair', 'lab_coat', 'monocle'],
+    scale: 0.95,
+    personality: {
+      voicePitch: 1.2,
+      talkSpeed: 35,
+      idleAnimation: 'tinker',
+      walkSpeed: 1.8,
+    },
+  },
+
+  treasurer: {
+    id: 'treasurer',
+    name: 'Treasurer',
+    role: 'treasurer',
+    bodyColor: PALETTE.TREASURER_TEAL,
+    accentColor: PALETTE.EINSTEIN_GOLD,
+    screenColor: PALETTE.SCREEN_CYAN,
+    eyeColor: '#FFD700',
+    bodyShape: 'stocky',
+    headShape: 'wide',
+    accessories: ['top_hat', 'monocle'],
+    scale: 1.1,
+    personality: {
+      voicePitch: 0.7,
+      talkSpeed: 20,
+      idleAnimation: 'fidget',
+      walkSpeed: 2.0,
+    },
+  },
+
+  scribe: {
+    id: 'scribe',
+    name: 'Scribe',
+    role: 'scribe',
+    bodyColor: PALETTE.SCRIBE_AMBER,
+    accentColor: PALETTE.CHROME,
+    screenColor: PALETTE.SCREEN_AMBER,
+    eyeColor: '#FFFFFF',
+    bodyShape: 'slim',
+    headShape: 'rounded_box',
+    accessories: ['headphones'],
+    scale: 0.85,
+    personality: {
+      voicePitch: 1.4,
+      talkSpeed: 40,
+      idleAnimation: 'tap_desk',
+      walkSpeed: 3.0,
+    },
+  },
+
+  postmaster: {
+    id: 'postmaster',
+    name: 'Postmaster',
+    role: 'postmaster',
+    bodyColor: PALETTE.POSTMASTER_RED,
+    accentColor: PALETTE.DARK_CHROME,
+    screenColor: PALETTE.SCREEN_WARM,
+    eyeColor: '#FFFFFF',
+    bodyShape: 'round',
+    headShape: 'box',
+    accessories: ['antenna_double', 'backpack'],
+    scale: 1.05,
+    personality: {
+      voicePitch: 0.9,
+      talkSpeed: 28,
+      idleAnimation: 'look_around',
+      walkSpeed: 2.2,
+    },
+  },
+
+  scout: {
+    id: 'scout',
+    name: 'Scout',
+    role: 'scout',
+    bodyColor: PALETTE.SCOUT_ORANGE,
+    accentColor: PALETTE.CHROME,
+    screenColor: PALETTE.SCREEN_AMBER,
+    eyeColor: '#FFFFFF',
+    bodyShape: 'standard',
+    headShape: 'rounded_box',
+    accessories: ['goggles', 'tool_belt', 'scarf'],
+    scale: 1.0,
+    personality: {
+      voicePitch: 1.1,
+      talkSpeed: 32,
+      idleAnimation: 'look_around',
+      walkSpeed: 3.5,
+    },
+  },
+
+  oracle: {
+    id: 'oracle',
+    name: 'Oracle',
+    role: 'oracle',
+    bodyColor: PALETTE.ORACLE_DARK,
+    accentColor: PALETTE.DARK_CHROME,
+    screenColor: '#3300FF',
+    eyeColor: '#FF6600',
+    bodyShape: 'tall',
+    headShape: 'dome',
+    accessories: ['cape', 'antenna_dish'],
+    scale: 1.15,
+    personality: {
+      voicePitch: 0.5,
+      talkSpeed: 18,
+      idleAnimation: 'look_around',
+      walkSpeed: 1.5,
+    },
+  },
+
+  diplomat: {
+    id: 'diplomat',
+    name: 'Diplomat',
+    role: 'diplomat',
+    bodyColor: PALETTE.DIPLOMAT_CREAM,
+    accentColor: PALETTE.CHROME,
+    screenColor: PALETTE.SCREEN_CYAN,
+    eyeColor: '#333333',
+    bodyShape: 'slim',
+    headShape: 'rounded_box',
+    accessories: ['top_hat'],
+    scale: 1.0,
+    personality: {
+      voicePitch: 1.0,
+      talkSpeed: 22,
+      idleAnimation: 'wave',
+      walkSpeed: 2.0,
+    },
+  },
+
+  mernz: {
+    id: 'mernz',
+    name: 'Mernz',
+    role: 'mernz',
+    bodyColor: PALETTE.MERNZ_PURPLE,
+    accentColor: PALETTE.CHROME,
+    screenColor: PALETTE.SCREEN_AMBER,
+    eyeColor: '#FFFFFF',
+    bodyShape: 'standard',
+    headShape: 'box',
+    accessories: ['antenna_single', 'backpack'],
+    scale: 1.0,
+    personality: {
+      voicePitch: 1.3,
+      talkSpeed: 30,
+      idleAnimation: 'fidget',
+      walkSpeed: 2.5,
+    },
+  },
+};
+
+/**
+ * Default robot configuration for the player character.
+ */
+export const PLAYER_DEFAULT_CONFIG: RobotConfig = {
+  id: 'player',
+  name: 'You',
+  role: 'player',
+  bodyColor: '#CC7722',
+  accentColor: PALETTE.CHROME,
+  screenColor: PALETTE.SCREEN_AMBER,
+  eyeColor: '#FFFFFF',
+  bodyShape: 'standard',
+  headShape: 'rounded_box',
+  accessories: [],
+  scale: 1.0,
+  personality: {
+    voicePitch: 1.0,
+    talkSpeed: 30,
+    idleAnimation: 'fidget',
+    walkSpeed: 4.0,
+  },
+};

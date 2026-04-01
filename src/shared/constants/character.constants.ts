@@ -1,0 +1,38 @@
+export const CHARACTER = {
+  // -- Player Movement --
+  WALK_SPEED: 4.0,
+  RUN_SPEED: 7.5,
+  TURN_SPEED: 8.0,
+  JUMP_FORCE: 5.0,
+  GRAVITY: -20.0,
+
+  // -- Physics Capsule --
+  CAPSULE_RADIUS: 0.35,
+  CAPSULE_HEIGHT: 1.2,
+
+  // -- Camera --
+  CAMERA_FOLLOW_DISTANCE: 6,
+  CAMERA_FOLLOW_HEIGHT: 3.5,
+  CAMERA_SMOOTHING: 0.08,
+  CAMERA_MIN_DISTANCE: 3,
+  CAMERA_MAX_DISTANCE: 12,
+
+  // -- Interaction --
+  INTERACTION_DISTANCE: 2.5,
+  NPC_RENDER_DISTANCE: 60,
+  NPC_ANIMATION_DISTANCE: 30,
+
+  // -- Robot Part Dimensions (base, before scale) --
+  BODY_WIDTH: 0.6,
+  BODY_HEIGHT: 0.7,
+  BODY_DEPTH: 0.4,
+  HEAD_WIDTH: 0.5,
+  HEAD_HEIGHT: 0.4,
+  HEAD_DEPTH: 0.35,
+  SCREEN_WIDTH: 0.38,
+  SCREEN_HEIGHT: 0.28,
+  ARM_RADIUS: 0.07,
+  ARM_LENGTH: 0.5,
+  LEG_RADIUS: 0.08,
+  LEG_LENGTH: 0.4,
+} as const;
